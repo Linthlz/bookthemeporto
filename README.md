@@ -9,7 +9,10 @@ Dibuat dengan React + Vite + Tailwind CSS v4 + [Motion](https://motion.dev) untu
 npm install
 npm run dev      # buka http://localhost:5173
 npm run build    # hasil produksi di folder dist/
+npm run deploy   # build + terbitkan ke GitHub Pages (branch gh-pages)
 ```
+
+Situs live: https://linthlz.github.io/bookthemeporto/
 
 ## Mengganti isi
 
