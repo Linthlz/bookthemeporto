@@ -7,8 +7,12 @@ import rumahMenara from '../assets/rumah-menara.jpg'
 import potret from '../assets/yosifa-potret.jpg'
 import membaca from '../assets/yosifa-membaca.jpg'
 import perpustakaan from '../assets/yosifa-perpustakaan.jpg'
+import taman from '../assets/yosifa-taman.jpg'
+import rumput from '../assets/yosifa-rumput.jpg'
+import senyum from '../assets/yosifa-senyum.jpg'
+import kampus from '../assets/yosifa-kampus.jpg'
 
-export const images = { ruangBaca, rakTanaman, bukuDaisy, ayunan, rumahMenara, potret, membaca, perpustakaan }
+export const images = { ruangBaca, rakTanaman, bukuDaisy, ayunan, rumahMenara, potret, membaca, perpustakaan, taman, rumput, senyum, kampus }
 
 export const profile = {
   name: 'Yosifa Syahira Febriyanti',
@@ -181,7 +185,7 @@ export const projects = [
     cover: '#3f4a3a',
     accent: '#ceab93',
     height: 88,
-    image: bukuDaisy,
+    image: taman,
     role: 'Tutor Privat',
     synopsis:
       'Memberikan bimbingan belajar secara personal sesuai kebutuhan akademik dan kemampuan belajar setiap siswa, dengan menyesuaikan cara menjelaskan dan metode mengajar agar materi lebih mudah dipahami.',
@@ -194,7 +198,7 @@ export const projects = [
     cover: '#8a5a3c',
     accent: '#fffbe9',
     height: 100,
-    image: rakTanaman,
+    image: rumput,
     role: 'Perancang media pembelajaran',
     synopsis:
       'Merancang dan mengembangkan bahan ajar berdasarkan kebutuhan belajar siswa, sambil menjelajahi pendekatan kreatif agar materi pelajaran lebih menarik dan mudah diakses.',
@@ -207,7 +211,7 @@ export const projects = [
     cover: '#4a2f2a',
     accent: '#e3caa5',
     height: 92,
-    image: ayunan,
+    image: senyum,
     role: 'Penulis esai',
     synopsis:
       'Mengembangkan gagasan dan menyusun argumen secara logis dan runtut melalui esai, sekaligus berlatih menyampaikan ide dengan jelas dan sistematis dalam bentuk tulisan.',
@@ -220,7 +224,7 @@ export const projects = [
     cover: '#ad8b73',
     accent: '#3b2a21',
     height: 86,
-    image: ruangBaca,
+    image: kampus,
     role: 'Penulis artikel',
     synopsis:
       'Menulis artikel umum dan mengembangkan materi edukatif — mengubah hal-hal yang dipelajari menjadi bacaan yang hangat dan mudah dicerna.',

@@ -1,5 +1,4 @@
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'motion/react'
+import { motion } from 'motion/react'
 import { images, profile, quotes } from '../data/portfolio'
 import { Deckle, SectionTitle } from './Ornaments'
 import MarginNote from './MarginNote'
@@ -7,12 +6,6 @@ import MarginNote from './MarginNote'
 const ease = [0.22, 1, 0.36, 1]
 
 export default function Prologue() {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'center center'] })
-  const rotateX = useTransform(scrollYProgress, [0, 1], [28, 0])
-  const scale = useTransform(scrollYProgress, [0, 1], [0.88, 1])
-  const leftRotate = useTransform(scrollYProgress, [0.2, 1], [-25, 0])
-
   return (
     <section id="prolog" className="paper grain relative py-28 sm:py-36">
       <Deckle position="top" />
@@ -32,16 +25,16 @@ export default function Prologue() {
         delay={0.5}
       />
 
-      <div ref={ref} className="perspective mx-auto mt-16 max-w-5xl px-5 md:px-8">
+      <div className="mx-auto mt-16 max-w-5xl px-5 md:px-8">
         <motion.div
-          style={{ rotateX, scale }}
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 1.1, ease }}
           className="grid rounded-[3px] shadow-[0_2px_0_var(--color-sand),0_4px_0_var(--color-cream),0_5px_0_var(--color-tan),0_7px_0_var(--color-cream),0_8px_0_var(--color-tan),0_40px_60px_-25px_rgb(59_42_33/0.55)] md:grid-cols-2"
         >
           {/* Halaman kiri */}
-          <motion.figure
-            style={{ rotateY: leftRotate, transformPerspective: 1600, transformOrigin: 'right center' }}
-            className="paper relative flex flex-col px-6 pt-8 pb-6 shadow-[inset_-28px_0_32px_-24px_rgb(59_42_33/0.3)] md:px-10 md:pt-10"
-          >
+          <figure className="paper relative flex flex-col px-6 pt-8 pb-6 shadow-[inset_-28px_0_32px_-24px_rgb(59_42_33/0.3)] md:px-10 md:pt-10">
             {/* Pemicu ada di bingkai: elemen yang ter-clip penuh tak terdeteksi IntersectionObserver */}
             <motion.div
               className="relative overflow-hidden border border-tan p-2"
@@ -63,7 +56,7 @@ export default function Prologue() {
               Fig. I — Sang penulis, di antara buku dan cahaya senja.
             </figcaption>
             <span className="mt-auto pt-4 text-center text-sm text-mocha">ii</span>
-          </motion.figure>
+          </figure>
 
           {/* Halaman kanan */}
           <div className="paper relative flex flex-col px-6 pt-10 pb-6 shadow-[inset_28px_0_32px_-24px_rgb(59_42_33/0.3)] md:px-12">

@@ -132,7 +132,7 @@ export default function BookModal({ project, index, onClose }) {
             style={{ transform: 'rotateY(180deg)' }}
           >
             <div className="flex-1 overflow-hidden border border-tan p-2">
-              <img src={project.image} alt="" className="h-full w-full object-cover sepia-[.25]" />
+              <img src={project.image} alt="" className="h-full w-full object-cover object-[50%_30%] sepia-[.12]" />
             </div>
             <p className="mt-4 text-center text-sm italic text-ink-soft">Fig. — {project.title}</p>
           </div>
@@ -148,7 +148,7 @@ export default function BookModal({ project, index, onClose }) {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         style={{ transformPerspective: 1200 }}
       >
-        <img src={project.image} alt="" className="aspect-[16/10] w-full object-cover sepia-[.25]" />
+        <img src={project.image} alt="" className="aspect-[4/3] w-full object-cover object-[50%_30%] sepia-[.12]" />
         <div className="flex flex-col px-6 py-7">
           <Details project={project} index={index} />
         </div>

@@ -13,12 +13,21 @@ const links = [
 export default function Nav() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [hidden, setHidden] = useState(false)
   const [active, setActive] = useState('')
   const { scrollYProgress } = useScroll()
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 })
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
+    // Sembunyi saat menggulir ke bawah, muncul lagi saat menggulir ke atas
+    let lastY = window.scrollY
+    const onScroll = () => {
+      const y = window.scrollY
+      setScrolled(y > 60)
+      if (Math.abs(y - lastY) < 6) return
+      setHidden(y > lastY && y > 160)
+      lastY = y
+    }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
 
@@ -44,8 +53,8 @@ export default function Nav() {
     <>
       <motion.header
         initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+        animate={{ y: hidden && !open ? '-100%' : 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         className={`fixed inset-x-0 top-0 z-50 transition-[background-color,backdrop-filter,box-shadow] duration-500 ${
           scrolled ? 'bg-night/95 shadow-[0_8px_30px_-12px_rgb(0_0_0/0.6)] backdrop-blur-md' : ''
         }`}
