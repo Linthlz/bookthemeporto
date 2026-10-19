@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+/* Palet dari Color Hunt: #AD8B73 · #CEAB93 · #E3CAA5 · #FFFBE9
+   ditambah tinta gelap, malam, dan emas untuk nuansa magis. */
+@theme {
+  --color-mocha: #ad8b73;
+  --color-tan: #ceab93;
+  --color-sand: #e3caa5;
+  --color-cream: #fffbe9;
+  --color-ink: #3b2a21;
+  --color-ink-soft: #6b5444;
+  --color-night: #1c1410;
+  --color-night-soft: #2a1f18;
+  --color-gold: #d9b26f;
+  --color-gold-soft: #f1d9a6;
+
+  --font-display: "IM Fell English", "EB Garamond", Georgia, serif;
+  --font-serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-caps: "Cinzel", "EB Garamond", Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-night text-ink font-serif antialiased;
+    font-size: 1.125rem;
+    line-height: 1.65;
+    font-feature-settings: "liga", "onum";
+    overflow-x: hidden;
+  }
+  ::selection {
+    background: var(--color-gold-soft);
+    color: var(--color-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-night);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--color-mocha), var(--color-ink-soft));
+    border-radius: 10px;
+    border: 2px solid var(--color-night);
+  }
+}
+
+/* Kertas tua dengan noda halus */
+.paper {
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(ellipse at 15% 8%, rgb(227 202 165 / 0.35), transparent 55%),
+    radial-gradient(ellipse at 85% 92%, rgb(206 171 147 / 0.3), transparent 55%),
+    radial-gradient(circle at 50% 50%, transparent 60%, rgb(173 139 115 / 0.18) 100%);
+}
+
+/* Butiran kertas — SVG noise ditaruh sebagai lapisan */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .42 0 0 0 0 .33 0 0 0 0 .27 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.leather {
+  background-color: var(--color-ink);
+  background-image:
+    radial-gradient(circle at 30% 20%, rgb(255 251 233 / 0.14), transparent 50%),
+    radial-gradient(circle at 70% 85%, rgb(0 0 0 / 0.35), transparent 55%);
+}
+
+/* Teks berkilau emas */
+.gilt {
+  background: linear-gradient(
+    100deg,
+    #b8894a 0%,
+    #f1d9a6 22%,
+    #c99a55 40%,
+    #fff1cf 52%,
+    #b8894a 70%,
+    #e8c588 100%
+  );
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gilt-shine 7s ease-in-out infinite;
+}
+@keyframes gilt-shine {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Cahaya lilin yang berkedip */
+.candle-glow {
+  animation: flicker 4s ease-in-out infinite;
+}
+@keyframes flicker {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  20% { opacity: 1; transform: scale(1.03); }
+  40% { opacity: 0.75; transform: scale(0.98); }
+  60% { opacity: 0.95; transform: scale(1.02); }
+  80% { opacity: 0.8; }
+}
+
+/* Huruf awal besar (drop cap) */
+.drop-cap::first-letter {
+  float: left;
+  font-family: var(--font-display);
+  font-size: 4.6em;
+  line-height: 0.82;
+  padding: 0.08em 0.12em 0 0;
+  color: var(--color-mocha);
+}
+
+/* Garis titik-titik daftar isi */
+.leader {
+  background-image: radial-gradient(circle, var(--color-mocha) 1px, transparent 1.4px);
+  background-size: 9px 4px;
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
+.spine-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+/* Tepi kertas bergerigi (deckled) di atas/bawah bagian */
+.deckle-top,
+.deckle-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 22px;
+  pointer-events: none;
+  z-index: 2;
+}
+.deckle-top {
+  top: -21px;
+}
+.deckle-bottom {
+  bottom: -21px;
+  transform: scaleY(-1);
+}
+
+.perspective {
+  perspective: 1800px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .gilt,
+  .candle-glow {
+    animation: none;
+  }
+}
