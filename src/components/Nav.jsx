@@ -5,7 +5,7 @@ import { profile } from '../data/portfolio'
 const links = [
   { href: '#prolog', label: 'Prolog' },
   { href: '#daftar-isi', label: 'Daftar Isi' },
-  { href: '#rak-karya', label: 'Rak Karya' },
+  { href: '#rak-karya', label: 'Pengalaman' },
   { href: '#kronik', label: 'Kronik' },
   { href: '#surat', label: 'Surat' },
 ]
@@ -56,7 +56,7 @@ export default function Nav() {
               {profile.monogram}
               <span className="absolute inset-1 rounded-full border border-gold/25" />
             </span>
-            <span className="hidden font-display text-xl text-cream sm:block">{profile.name}</span>
+            <span className="hidden font-display text-xl text-cream lg:block">{profile.name}</span>
           </a>
 
           <nav aria-label="Navigasi utama" className="hidden md:block">

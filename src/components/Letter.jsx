@@ -83,7 +83,7 @@ export default function Letter() {
       <div className="relative mx-auto max-w-6xl px-5 md:px-8">
         <SectionTitle kicker="Bab Penutup" title="Kirimkan Sepucuk Surat" light />
         <p className="mx-auto mt-4 max-w-[46ch] text-center italic text-sand/75">
-          Punya naskah yang ingin dihidupkan? Tuliskan di sini — saya membalas setiap surat dalam dua hari kerja.
+          Ingin berdiskusi tentang les, pendampingan belajar, atau tulisan? Tuliskan sepucuk surat di sini.
         </p>
 
         <div className="perspective mx-auto mt-16 max-w-2xl lg:ml-auto lg:mr-[4%]">
@@ -100,7 +100,7 @@ export default function Letter() {
                 transition={{ duration: 1, ease }}
               >
                 <div className="flex items-start justify-between gap-4">
-                  <p className="font-display text-lg italic text-ink-soft">Kepada {profile.name} yang baik,</p>
+                  <p className="font-display text-lg italic text-ink-soft">Kepada {profile.name.split(' ')[0]} yang baik,</p>
                   <div className="grid h-16 w-14 shrink-0 rotate-6 place-items-center border-2 border-dashed border-mocha/60 bg-sand/40 p-1">
                     <Sparkle className="h-6 w-6 text-mocha" />
                   </div>
@@ -119,6 +119,11 @@ export default function Letter() {
                     atau langsung ke{' '}
                     <a href={`mailto:${profile.email}`} className="text-ink underline decoration-tan underline-offset-4 hover:decoration-ink">
                       {profile.email}
+                    </a>
+                    <br />
+                    WhatsApp{' '}
+                    <a href={`https://wa.me/${profile.whatsapp}`} className="text-ink underline decoration-tan underline-offset-4 hover:decoration-ink">
+                      {profile.phone}
                     </a>
                   </p>
                   <motion.button

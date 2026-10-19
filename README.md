@@ -1,4 +1,4 @@
-# Arunika Senja — Portofolio
+# Yosifa Syahira Febriyanti — Portofolio
 
 Portofolio bernuansa buku & perpustakaan: klasik, elegan, dan sedikit magis.
 Dibuat dengan React + Vite + Tailwind CSS v4 + [Motion](https://motion.dev) untuk animasi.
@@ -16,8 +16,9 @@ Situs live: https://linthlz.github.io/bookthemeporto/
 
 ## Mengganti isi
 
-Semua teks ada di **`src/data/portfolio.js`** — nama, peran, bio, keahlian (daftar isi),
-karya (buku di rak), riwayat (kronik), media sosial, dan kumpulan kutipan buku.
+Semua teks ada di **`src/data/portfolio.js`** dan diambil dari CV Yosifa — profil, keterampilan (daftar isi),
+pengalaman & kegiatan (buku di rak), riwayat (kronik), kontak, dan kumpulan kutipan buku.
+Foto pemilik: `yosifa-potret.jpg` (Prolog), `yosifa-perpustakaan.jpg` (buku Brilliant Academy), `yosifa-membaca.jpg` (jeda kutipan Matilda).
 Foto diambil dari `src/assets/` (salinan terkompres dari folder `asset/`).
 
 ## Susunan halaman
@@ -28,7 +29,7 @@ Foto diambil dari `src/assets/` (salinan terkompres dari folder `asset/`).
 | Sampul | `Hero.jsx` | Foto ruang baca dengan paralaks gulir & mouse, cahaya lilin, nama muncul huruf demi huruf |
 | Prolog | `Prologue.jsx` | Buku terbuka yang "berdiri" saat digulir, foto terbuka dari bawah, tanda tangan tertulis |
 | Daftar Isi | `Contents.jsx` | Keahlian sebagai daftar isi; garis titik-titik tergambar, bab terbuka saat diarahkan |
-| Rak Karya | `Library.jsx`, `BookModal.jsx` | Buku jatuh ke rak, terangkat saat hover; klik → sampul membuka jadi dua halaman |
+| Rak Pengalaman | `Library.jsx`, `BookModal.jsx` | Buku jatuh ke rak, terangkat saat hover; klik → sampul membuka jadi dua halaman |
 | Kronik | `Chronicle.jsx` | Garis tinta tergambar mengikuti gulir, segel lilin di setiap tahun |
 | Surat | `Letter.jsx` | Formulir berbentuk surat; "Segel & Kirim" melipat surat jadi amplop bersegel lalu membuka aplikasi email |
 | Tamat | `Colophon.jsx` | Halaman penutup & kolofon |
@@ -58,6 +59,5 @@ Font: **IM Fell English** (judul), **EB Garamond** (teks), **Cinzel** (label kap
 
 - Semua animasi dimatikan/disederhanakan bila sistem pengguna memakai *reduce motion*.
 - Formulir surat tidak butuh backend: ia membuka aplikasi email pengunjung dengan isi yang sudah terisi.
-- Nama, karya, riwayat, dan alamat email adalah contoh — ganti di `src/data/portfolio.js`.
 - Komponen lama toko buku (`Header`, `Shelf`, `ReadingRoom`, `BookClub`, `Visit`, `Footer`, `data/books.js`)
   masih ada di folder tapi tidak dipakai lagi; boleh dihapus.

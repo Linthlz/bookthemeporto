@@ -37,7 +37,7 @@ export default function App() {
         <Contents />
         <QuoteInterlude quote={quotes[4]} image={images.bukuDaisy} position="50% 40%" />
         <Library />
-        <QuoteInterlude quote={quotes[9]} image={images.ayunan} position="50% 30%" />
+        <QuoteInterlude quote={quotes[13]} image={images.membaca} position="50% 70%" />
         <Chronicle />
         <QuoteInterlude quote={quotes[10]} image={images.ruangBaca} position="50% 60%" />
         <Letter />

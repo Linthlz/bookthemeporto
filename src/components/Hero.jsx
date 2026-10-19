@@ -29,7 +29,7 @@ export default function Hero({ ready }) {
     my.set((e.clientY - r.top) / r.height - 0.5)
   }
 
-  const letters = profile.name.split('')
+  const words = profile.name.split(' ')
   const quote = quotes[0]
   const show = ready ? 'show' : 'hidden'
 
@@ -93,25 +93,29 @@ export default function Hero({ ready }) {
           — Sebuah Portofolio · Jilid MMXXVI —
         </motion.p>
 
-        <h1 className="mt-6 font-display text-[3.4rem] leading-[0.95] text-cream sm:text-8xl lg:text-[8.5rem]" aria-label={profile.name}>
+        <h1 className="mt-6 font-display text-[2.9rem] leading-[1] text-cream sm:text-7xl lg:text-[6.5rem]" aria-label={profile.name}>
+          {/* Huruf dikelompokkan per kata agar kata tidak terpotong saat baris membungkus */}
           <motion.span
             aria-hidden="true"
-            className="inline-block"
             initial="hidden"
             animate={show}
-            variants={{ show: { transition: { staggerChildren: 0.06, delayChildren: 0.5 } } }}
+            variants={{ show: { transition: { staggerChildren: 0.045, delayChildren: 0.5 } } }}
           >
-            {letters.map((ch, i) => (
-              <motion.span
-                key={i}
-                className={`inline-block ${ch === ' ' ? 'w-[0.3em] sm:block sm:h-0 sm:w-full' : ''}`}
-                variants={{
-                  hidden: { opacity: 0, y: 40, filter: 'blur(12px)', rotateX: -80 },
-                  show: { opacity: 1, y: 0, filter: 'blur(0px)', rotateX: 0, transition: { duration: 1.1, ease } },
-                }}
-              >
-                {ch === ' ' ? ' ' : ch}
-              </motion.span>
+            {words.map((word, wi) => (
+              <span key={wi} className="inline-block whitespace-nowrap px-[0.12em]">
+                {word.split('').map((ch, i) => (
+                  <motion.span
+                    key={i}
+                    className="inline-block"
+                    variants={{
+                      hidden: { opacity: 0, y: 40, filter: 'blur(12px)', rotateX: -80 },
+                      show: { opacity: 1, y: 0, filter: 'blur(0px)', rotateX: 0, transition: { duration: 1.1, ease } },
+                    }}
+                  >
+                    {ch}
+                  </motion.span>
+                ))}
+              </span>
             ))}
           </motion.span>
         </h1>
@@ -152,7 +156,7 @@ export default function Hero({ ready }) {
             href="#rak-karya"
             className="group relative overflow-hidden rounded-[2px] border border-gold bg-gold/90 px-8 py-3 font-caps text-sm uppercase tracking-[0.2em] text-night transition-colors"
           >
-            <span className="relative z-10">Buka Rak Karya</span>
+            <span className="relative z-10">Lihat Pengalaman</span>
             <span className="absolute inset-0 -translate-x-full bg-gold-soft transition-transform duration-500 group-hover:translate-x-0" />
           </a>
           <a

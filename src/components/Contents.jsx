@@ -27,7 +27,7 @@ export default function Contents() {
         <div>
           <SectionTitle kicker="Bab Kedua" title="Daftar Isi" align="left" />
           <p className="mt-4 max-w-[52ch] italic text-ink-soft">
-            Lima bab keahlian yang saya tulis, hapus, dan tulis ulang selama bertahun-tahun.
+            Lima bab keterampilan yang terus saya pelajari dan asah sebagai calon pendidik.
           </p>
 
           <ol className="mt-12 border-t border-mocha/40">

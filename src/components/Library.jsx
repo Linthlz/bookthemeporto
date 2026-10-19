@@ -11,7 +11,7 @@ function Spine({ project, index, onOpen }) {
     <motion.button
       type="button"
       onClick={onOpen}
-      aria-label={`Buka ${project.title} — ${project.genre}, ${project.year}`}
+      aria-label={`Buka ${project.title} — ${project.genre}`}
       className="group relative shrink-0 origin-bottom"
       style={{ height: `${project.height}%` }}
       initial={{ y: -260, opacity: 0, rotate: -8 }}
@@ -39,7 +39,7 @@ function Spine({ project, index, onOpen }) {
           <Sparkle className="h-3 w-3" style={{ color: project.accent }} />
           <span className="block h-px w-full" style={{ backgroundColor: project.accent, opacity: 0.7 }} />
           <span className="text-[0.65rem]" style={{ color: project.accent }}>
-            {String(project.year).slice(2)}
+            {['I', 'II', 'III', 'IV', 'V', 'VI', 'VII'][index]}
           </span>
         </span>
         {/* Kilau saat hover */}
@@ -114,7 +114,7 @@ export default function Library() {
       <div className="absolute inset-0 bg-[linear-gradient(180deg,var(--color-night)_0%,rgb(28_20_16/0.6)_30%,rgb(28_20_16/0.7)_70%,var(--color-night)_100%)]" />
 
       <div className="relative mx-auto max-w-6xl px-5 md:px-8">
-        <SectionTitle kicker="Bab Ketiga" title="Rak Karya" light />
+        <SectionTitle kicker="Bab Ketiga" title="Rak Pengalaman" light />
         <motion.p
           className="mx-auto mt-4 max-w-[48ch] text-center italic text-sand/75"
           initial={{ opacity: 0 }}
@@ -122,7 +122,7 @@ export default function Library() {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 1 }}
         >
-          Setiap karya adalah sebuah buku. Ambil satu dari rak, dan biarkan sampulnya terbuka.
+          Setiap pengalaman adalah sebuah buku. Ambil satu dari rak, dan biarkan sampulnya terbuka.
         </motion.p>
 
         {/* Rak */}
@@ -170,7 +170,7 @@ export default function Library() {
                   </span>
                   <span className="block text-sm italic text-tan/70">{p.genre}</span>
                 </span>
-                <span className="text-sm text-tan/60 transition-transform group-hover:-translate-x-1">{p.year}</span>
+                <span className="text-sm text-tan/60 transition-transform group-hover:-translate-x-1">{p.label}</span>
               </button>
             </motion.li>
           ))}

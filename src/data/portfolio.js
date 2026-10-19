@@ -1,34 +1,37 @@
-// Semua isi portofolio ada di sini — ganti dengan data Anda sendiri.
+// Semua isi portofolio ada di sini — diambil dari CV Yosifa Syahira Febriyanti.
 import ruangBaca from '../assets/ruang-baca.jpg'
 import rakTanaman from '../assets/rak-tanaman.jpg'
 import bukuDaisy from '../assets/buku-daisy.jpg'
 import ayunan from '../assets/ayunan.jpg'
 import rumahMenara from '../assets/rumah-menara.jpg'
+import potret from '../assets/yosifa-potret.jpg'
+import membaca from '../assets/yosifa-membaca.jpg'
+import perpustakaan from '../assets/yosifa-perpustakaan.jpg'
 
-export const images = { ruangBaca, rakTanaman, bukuDaisy, ayunan, rumahMenara }
+export const images = { ruangBaca, rakTanaman, bukuDaisy, ayunan, rumahMenara, potret, membaca, perpustakaan }
 
 export const profile = {
-  name: 'Arunika Senja',
-  monogram: 'AS',
-  role: 'Perancang Antarmuka & Pengembang Web',
-  city: 'Yogyakarta',
-  email: 'halo@arunikasenja.id',
+  name: 'Yosifa Syahira Febriyanti',
+  monogram: 'YS',
+  role: 'Mahasiswi PGSD · Calon Pendidik',
+  city: 'Singaraja, Bali',
+  email: 'syahiraaure@gmail.com',
+  phone: '0881038206732',
+  whatsapp: '62881038206732',
   tagline:
-    'Saya merangkai antarmuka seperti menjilid buku: halaman demi halaman, dengan huruf yang dipilih sabar dan detail yang dirawat.',
+    'Mahasiswi Pendidikan Guru Sekolah Dasar yang percaya bahwa setiap anak adalah buku dengan cerita dan cara belajarnya sendiri.',
   about: [
-    'Setiap proyek saya perlakukan sebagai sebuah naskah. Ada prolog untuk memahami pembacanya, bab-bab untuk menyusun alurnya, dan epilog yang membuat orang ingin kembali membuka halamannya.',
-    'Sudah tujuh tahun saya bekerja di persimpangan desain dan kode — membangun situs, aplikasi, dan arsip digital untuk penerbit, kedai kecil, museum, hingga perusahaan rintisan. Saya percaya teknologi terbaik terasa seperti buku tua yang hangat: akrab, tenang, dan tidak pernah membuat pembacanya tersesat.',
+    'Saya mahasiswi Pendidikan Guru Sekolah Dasar (PGSD) di Universitas Pendidikan Ganesha dengan minat besar pada dunia mengajar — terutama dalam menyampaikan materi pembelajaran dan mendampingi siswa sekolah dasar sepanjang proses belajarnya.',
+    'Saya tertarik mengembangkan metode mengajar yang kreatif dan komunikatif, serta merancang media pembelajaran inovatif yang sesuai dengan kebutuhan belajar siswa. Selain mengajar, saya juga gemar mengembangkan materi edukatif, menulis esai, dan menulis artikel umum.',
   ],
   facts: [
-    { value: '7', label: 'tahun menulis kode' },
-    { value: '42', label: 'naskah selesai' },
-    { value: '∞', label: 'cangkir teh' },
+    { value: '2023', label: 'mulai menempuh PGSD' },
+    { value: '2', label: 'pengalaman mengajar' },
+    { value: '∞', label: 'rasa ingin belajar' },
   ],
   socials: [
-    { label: 'GitHub', href: '#' },
-    { label: 'Dribbble', href: '#' },
-    { label: 'LinkedIn', href: '#' },
-    { label: 'Instagram', href: '#' },
+    { label: 'Email', href: 'mailto:syahiraaure@gmail.com' },
+    { label: 'WhatsApp', href: 'https://wa.me/62881038206732' },
   ],
 }
 
@@ -109,159 +112,146 @@ export const quotes = [
     author: 'Charlotte Brontë',
     book: 'Jane Eyre',
   },
+  {
+    text: "So Matilda's strong young mind continued to grow, nurtured by the voices of all those authors who had sent their books out into the world like ships onto the sea.",
+    id: 'Maka pikiran muda Matilda yang kuat terus tumbuh, dipupuk oleh suara para pengarang yang melayarkan buku-buku mereka ke dunia bagai kapal-kapal ke lautan.',
+    author: 'Roald Dahl',
+    book: 'Matilda',
+  },
 ]
 
-// Daftar isi = keahlian. `page` hanya hiasan, seperti nomor halaman.
+// Daftar isi = keterampilan. `page` hanya hiasan, seperti nomor halaman.
 export const chapters = [
   {
     numeral: 'I',
-    title: 'Desain Antarmuka',
+    title: 'Keterampilan Mengajar',
     page: 7,
-    note: 'Riset pengguna, wireframe, sistem desain, dan tipografi.',
-    tools: ['Figma', 'Design System', 'Prototyping', 'Tipografi'],
+    note: 'Menyampaikan materi dan mendampingi siswa sesuai kebutuhan belajarnya.',
+    tools: ['Penyampaian materi', 'Pendampingan belajar siswa', 'Latihan soal & kegiatan belajar', 'Adaptasi metode mengajar'],
   },
   {
     numeral: 'II',
-    title: 'Pengembangan Front-end',
-    page: 23,
-    note: 'Antarmuka yang cepat, rapi, dan bisa diakses semua pembaca.',
-    tools: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'],
+    title: 'Keterampilan Komunikasi',
+    page: 19,
+    note: 'Menjelaskan dengan jernih, dan mendengarkan dengan sabar.',
+    tools: ['Komunikasi interpersonal', 'Sabar & empati', 'Penjelasan yang jelas dan efektif'],
   },
   {
     numeral: 'III',
-    title: 'Animasi & Interaksi',
-    page: 41,
-    note: 'Gerak yang bercerita — halus, bermakna, tidak berlebihan.',
-    tools: ['Motion', 'GSAP', 'SVG', 'WebGL'],
+    title: 'Keterampilan Menulis',
+    page: 31,
+    note: 'Merangkai gagasan menjadi tulisan yang runtut dan mudah dipahami.',
+    tools: ['Pengembangan gagasan', 'Penyusunan argumen', 'Menulis esai', 'Menulis artikel umum'],
   },
   {
     numeral: 'IV',
-    title: 'Back-end & Data',
-    page: 58,
-    note: 'Fondasi yang kokoh di balik setiap halaman.',
-    tools: ['Node.js', 'PostgreSQL', 'REST & GraphQL', 'Supabase'],
+    title: 'Media Pembelajaran',
+    page: 44,
+    note: 'Merancang bahan ajar yang menarik dan mudah diakses siswa.',
+    tools: ['Bahan ajar sesuai kebutuhan', 'Pendekatan kreatif', 'Materi edukatif'],
   },
   {
     numeral: 'V',
-    title: 'Arsip & Konten Digital',
-    page: 76,
-    note: 'Merawat cerita, koleksi, dan memori agar mudah ditemukan.',
-    tools: ['Headless CMS', 'SEO', 'Aksesibilitas', 'Penulisan UX'],
+    title: 'Soft Skills',
+    page: 58,
+    note: 'Bekal sehari-hari, di dalam maupun di luar kelas.',
+    tools: ['Tanggung jawab', 'Kerja sama tim', 'Manajemen waktu', 'Kemampuan beradaptasi', 'Kreatif & mau belajar'],
   },
 ]
 
-// Karya = buku di rak. `cover` adalah warna sampul.
+// Pengalaman & kegiatan = buku di rak. `cover` adalah warna sampul, `label` jenisnya.
 export const projects = [
   {
-    title: 'Kedai Lentera',
-    genre: 'Identitas & Situs Web',
-    year: 2026,
+    title: 'Brilliant Academy',
+    genre: 'Bimbingan Belajar',
+    label: 'Pengalaman Mengajar',
     cover: '#6b3f2a',
     accent: '#e3caa5',
-    height: 92,
-    image: bukuDaisy,
-    role: 'Desainer & pengembang utama',
+    height: 96,
+    image: perpustakaan,
+    role: 'Tutor — Brilliant Academy Tutoring Center',
     synopsis:
-      'Rumah daring untuk kedai kopi yang buka hingga larut. Menu yang berganti mengikuti musim, pemesanan meja, dan jurnal cerita pelanggan.',
-    tools: ['Next.js', 'Sanity', 'Motion'],
-    link: '#',
+      'Membantu siswa memahami mata pelajaran melalui penjelasan yang terstruktur dan latihan soal yang disesuaikan dengan kebutuhan belajar mereka, serta memberikan pendampingan agar pemahaman materi mereka terus meningkat.',
+    tools: ['Penyampaian materi', 'Latihan soal', 'Pendampingan belajar'],
   },
   {
-    title: 'Atlas Rempah',
-    genre: 'Cerita Data Interaktif',
-    year: 2025,
+    title: 'Les Privat',
+    genre: 'Pendampingan Individu',
+    label: 'Pengalaman Mengajar',
     cover: '#3f4a3a',
     accent: '#ceab93',
-    height: 100,
-    image: rumahMenara,
-    role: 'Perancang interaksi',
+    height: 88,
+    image: bukuDaisy,
+    role: 'Tutor Privat',
     synopsis:
-      'Peta interaktif jalur rempah Nusantara: menelusuri pala, cengkih, dan lada dari pelabuhan ke pelabuhan dengan arsip kolonial yang dipindai.',
-    tools: ['D3.js', 'Mapbox', 'Svelte'],
-    link: '#',
+      'Memberikan bimbingan belajar secara personal sesuai kebutuhan akademik dan kemampuan belajar setiap siswa, dengan menyesuaikan cara menjelaskan dan metode mengajar agar materi lebih mudah dipahami.',
+    tools: ['Adaptasi metode', 'Sabar & empati', 'Penjelasan efektif'],
   },
   {
-    title: 'Surat untuk Nanti',
-    genre: 'Aplikasi Seluler',
-    year: 2025,
+    title: 'Media Pembelajaran',
+    genre: 'Pengembangan Bahan Ajar',
+    label: 'Kegiatan',
     cover: '#8a5a3c',
     accent: '#fffbe9',
-    height: 86,
-    image: ayunan,
-    role: 'Desainer produk',
+    height: 100,
+    image: rakTanaman,
+    role: 'Perancang media pembelajaran',
     synopsis:
-      'Kapsul waktu berbentuk surat. Tulis untuk dirimu lima tahun lagi, segel dengan lilin digital, dan biarkan ia sampai pada harinya.',
-    tools: ['React Native', 'Expo', 'Supabase'],
-    link: '#',
+      'Merancang dan mengembangkan bahan ajar berdasarkan kebutuhan belajar siswa, sambil menjelajahi pendekatan kreatif agar materi pelajaran lebih menarik dan mudah diakses.',
+    tools: ['Media inovatif', 'Pendekatan kreatif', 'Kebutuhan siswa'],
   },
   {
-    title: 'Arsip Keroncong',
-    genre: 'Arsip Digital',
-    year: 2024,
+    title: 'Esai & Gagasan',
+    genre: 'Penulisan Esai',
+    label: 'Kegiatan',
     cover: '#4a2f2a',
     accent: '#e3caa5',
-    height: 96,
-    image: ruangBaca,
-    role: 'Pengembang full-stack',
+    height: 92,
+    image: ayunan,
+    role: 'Penulis esai',
     synopsis:
-      'Ratusan piringan hitam keroncong didigitalkan, lengkap dengan lirik, cerita penyanyi, dan pemutar yang berderak seperti gramofon.',
-    tools: ['Astro', 'PostgreSQL', 'Web Audio'],
-    link: '#',
+      'Mengembangkan gagasan dan menyusun argumen secara logis dan runtut melalui esai, sekaligus berlatih menyampaikan ide dengan jelas dan sistematis dalam bentuk tulisan.',
+    tools: ['Pengembangan gagasan', 'Penyusunan argumen', 'Menulis sistematis'],
   },
   {
-    title: 'Kebun Kata',
-    genre: 'Alat Menulis',
-    year: 2023,
+    title: 'Artikel Umum',
+    genre: 'Penulisan Artikel',
+    label: 'Minat',
     cover: '#ad8b73',
     accent: '#3b2a21',
-    height: 88,
-    image: rakTanaman,
-    role: 'Pendiri & perancang',
+    height: 86,
+    image: ruangBaca,
+    role: 'Penulis artikel',
     synopsis:
-      'Ruang menulis yang tenang untuk penulis lepas. Setiap draf tumbuh menjadi tanaman; semakin rajin menulis, semakin rimbun kebunnya.',
-    tools: ['TypeScript', 'Tiptap', 'IndexedDB'],
-    link: '#',
-  },
-  {
-    title: 'Taman Baca Desa',
-    genre: 'Situs Nirlaba',
-    year: 2022,
-    cover: '#5c4636',
-    accent: '#ceab93',
-    height: 94,
-    image: bukuDaisy,
-    role: 'Relawan desainer & pengembang',
-    synopsis:
-      'Situs donasi buku dan jadwal relawan untuk 30 taman baca di pelosok. Ringan, bisa dibuka dengan sinyal seadanya.',
-    tools: ['Eleventy', 'Netlify', 'Alpine.js'],
-    link: '#',
+      'Menulis artikel umum dan mengembangkan materi edukatif — mengubah hal-hal yang dipelajari menjadi bacaan yang hangat dan mudah dicerna.',
+    tools: ['Menulis artikel', 'Materi edukatif', 'Bahasa yang jelas'],
   },
 ]
 
 // Riwayat perjalanan.
 export const journey = [
   {
-    year: '2024 — kini',
-    title: 'Perancang Antarmuka Senior',
-    place: 'Studio Lembar, Yogyakarta',
-    text: 'Memimpin desain dan front-end untuk penerbit, museum, dan merek lokal. Membangun sistem desain yang dipakai empat tim produk.',
+    year: '2023 — kini',
+    title: 'Pendidikan Guru Sekolah Dasar',
+    place: 'Universitas Pendidikan Ganesha, Bali',
+    text: 'Menempuh studi PGSD dengan minat pada metode mengajar yang kreatif dan komunikatif serta pengembangan media pembelajaran.',
   },
   {
-    year: '2021 — 2024',
-    title: 'Pengembang Front-end',
-    place: 'Rintisan Edukasi Baca.in',
-    text: 'Merancang ulang aplikasi membaca untuk 200 ribu pelajar. Waktu muat turun 60%, dan aksesibilitas lolos WCAG AA.',
+    year: 'Pengalaman mengajar',
+    title: 'Tutor',
+    place: 'Brilliant Academy Tutoring Center',
+    text: 'Membantu siswa memahami mata pelajaran lewat penjelasan terstruktur dan latihan soal yang disesuaikan dengan kebutuhan belajar mereka.',
   },
   {
-    year: '2019 — 2021',
-    title: 'Desainer & Pengembang Lepas',
-    place: 'Berbagai klien',
-    text: 'Situs untuk kedai, toko buku bekas, dan komunitas literasi. Di sinilah saya jatuh cinta pada detail-detail kecil.',
+    year: 'Pengalaman mengajar',
+    title: 'Tutor Privat',
+    place: 'Les privat',
+    text: 'Memberikan pendampingan belajar personal dan menyesuaikan metode mengajar dengan kemampuan setiap siswa.',
   },
   {
-    year: '2015 — 2019',
-    title: 'Sastra Indonesia',
-    place: 'Universitas Gadjah Mada',
-    text: 'Belajar membaca struktur cerita — bekal yang ternyata sangat berguna untuk menyusun alur sebuah antarmuka.',
+    year: 'Kegiatan tambahan',
+    title: 'Penulisan Esai & Media Pembelajaran',
+    place: 'Pengembangan diri',
+    text: 'Menulis esai yang runtut dan sistematis, serta merancang bahan ajar kreatif yang menarik bagi siswa.',
   },
 ]

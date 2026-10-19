@@ -50,9 +50,9 @@ export default function Prologue() {
               viewport={{ once: true, margin: '-100px' }}
             >
               <motion.img
-                src={images.ayunan}
-                alt="Ayunan kayu di pohon tua, di atas padang bunga daisy saat senja"
-                className="aspect-[4/5] w-full object-cover object-[50%_45%] sepia-[.2]"
+                src={images.potret}
+                alt={`Potret ${profile.name}`}
+                className="aspect-[4/5] w-full object-cover object-center sepia-[.12]"
                 variants={{
                   hidden: { clipPath: 'inset(100% 0 0 0)', scale: 1.3 },
                   show: { clipPath: 'inset(0% 0 0 0)', scale: 1, transition: { duration: 1.6, ease } },
@@ -60,14 +60,14 @@ export default function Prologue() {
               />
             </motion.div>
             <figcaption className="mt-4 text-center text-[0.95rem] italic text-ink-soft">
-              Fig. I — Tempat semua cerita bermula.
+              Fig. I — Sang penulis, di antara buku dan cahaya senja.
             </figcaption>
             <span className="mt-auto pt-4 text-center text-sm text-mocha">ii</span>
           </motion.figure>
 
           {/* Halaman kanan */}
           <div className="paper relative flex flex-col px-6 pt-10 pb-6 shadow-[inset_28px_0_32px_-24px_rgb(59_42_33/0.3)] md:px-12">
-            <p className="font-caps text-xs uppercase tracking-[0.3em] text-mocha">Tentang penulis</p>
+            <p className="font-caps text-xs uppercase tracking-[0.3em] text-mocha">Tentang saya</p>
             {profile.about.map((p, i) => (
               <motion.p
                 key={i}
@@ -99,7 +99,7 @@ export default function Prologue() {
 
             {/* Tanda tangan yang ditulis */}
             <div className="mt-6 flex items-end justify-between">
-              <span className="text-sm italic text-ink-soft">{profile.city}, 2026</span>
+              <span className="text-sm italic text-ink-soft">{profile.city}</span>
               <motion.svg viewBox="0 0 200 60" className="h-14 w-44 text-ink" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" aria-label={`Tanda tangan ${profile.name}`}>
                 <motion.path
                   d="M8 44c10-26 22-36 26-30s-10 30-4 30 14-24 20-24-4 22 2 22 10-14 16-14-2 12 4 12 12-20 18-20c4 0-6 22 0 22s14-18 22-18 0 16 8 16 14-10 22-12M60 52c30-4 70-6 120-8"

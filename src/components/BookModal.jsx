@@ -8,7 +8,7 @@ function Details({ project, index }) {
   return (
     <>
       <p className="font-caps text-xs uppercase tracking-[0.3em] text-mocha">
-        Jilid {String(index + 1).padStart(2, '0')} · {project.year}
+        Jilid {String(index + 1).padStart(2, '0')} · {project.label}
       </p>
       <h3 className="mt-3 font-display text-4xl leading-tight text-ink">{project.title}</h3>
       <p className="mt-1 italic text-ink-soft">{project.genre}</p>
@@ -20,7 +20,7 @@ function Details({ project, index }) {
           <dd className="text-ink-soft">{project.role}</dd>
         </div>
         <div>
-          <dt className="font-caps text-[0.65rem] uppercase tracking-[0.25em] text-mocha">Ditulis dengan</dt>
+          <dt className="font-caps text-[0.65rem] uppercase tracking-[0.25em] text-mocha">Keterampilan</dt>
           <dd className="mt-1 flex flex-wrap gap-2">
             {project.tools.map((t) => (
               <span key={t} className="rounded-full border border-tan px-3 py-0.5 text-sm text-ink">
@@ -30,13 +30,15 @@ function Details({ project, index }) {
           </dd>
         </div>
       </dl>
-      <a
-        href={project.link}
-        className="group mt-8 inline-flex items-center gap-3 self-start border-b border-ink pb-1 font-caps text-sm uppercase tracking-[0.2em] text-ink"
-      >
-        Baca selengkapnya
-        <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
-      </a>
+      {project.link && (
+        <a
+          href={project.link}
+          className="group mt-8 inline-flex items-center gap-3 self-start border-b border-ink pb-1 font-caps text-sm uppercase tracking-[0.2em] text-ink"
+        >
+          Baca selengkapnya
+          <span className="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
+        </a>
+      )}
     </>
   )
 }
@@ -121,7 +123,7 @@ export default function BookModal({ project, index, onClose }) {
               {project.title}
             </p>
             <p className="mt-4 font-caps text-xs uppercase tracking-[0.3em]" style={{ color: `${project.accent}bb` }}>
-              {project.year}
+              {project.label}
             </p>
           </div>
 
